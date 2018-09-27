@@ -7,7 +7,7 @@ import Body from './Body/Body';
 import Header from './Header/Header';
 import Landing from './Landing/Landing';
 import Footer from './Footer/Footer';
-const Dashboard = () => <h2>Dashboard</h2>;
+const UserProfile = () => <h2>User Profile</h2>;
 const SurveyNew = () => <h2>SurveyNew</h2>;
 
 class App extends Component {
