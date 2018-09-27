@@ -1,0 +1,9 @@
+footer {
+  display: flex;
+  height: 100px;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
