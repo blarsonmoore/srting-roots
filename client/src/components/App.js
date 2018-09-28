@@ -7,7 +7,7 @@ import Body from './Body/Body';
 import Header from './Header/Header';
 import Landing from './Landing/Landing';
 import Footer from './Footer/Footer';
-const UserProfile = () => <h2>User Profile</h2>;
+import UserProfile from './UserProfile/UserProfile';
 const SurveyNew = () => <h2>SurveyNew</h2>;
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
             <Body />
             <Header />
             <Route exact path="/" component={Landing} />
-            <Route exact path="/surveys" component={Dashboard} />
+            <Route exact path="/userProfile" component={UserProfile} />
             <Route exact path="/surveys/new" component={SurveyNew} />
             <Footer />
           </div>

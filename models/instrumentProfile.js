@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const instrumentSchema = new Schema({
-  tpye: String,
+  type: String,
   builder: String,
   model: String,
   serialNumber: String,
@@ -11,5 +11,8 @@ const instrumentSchema = new Schema({
   purchasedFrom: String,
   purchasePrice: Number,
   image: { data: Buffer, contentType: String },
-  notes: String
+  notes: String,
+  _user: { type: Schema.Types.ObjectId, ref: 'User' }
 });
+
+module.exports = instrumentSchema;

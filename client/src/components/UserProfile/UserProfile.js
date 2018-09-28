@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './UserProfile.css';
 
-class UserProfile extends Component = () => {
+const UserProfile = () => {
   return (
     <div>
       <h1>My Profile</h1>
