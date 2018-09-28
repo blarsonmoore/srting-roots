@@ -8,7 +8,8 @@ import Header from './Header/Header';
 import Landing from './Landing/Landing';
 import Footer from './Footer/Footer';
 import UserProfile from './UserProfile/UserProfile';
-const SurveyNew = () => <h2>SurveyNew</h2>;
+import InstrumentNew from './AddInstrument/AddInstrument';
+import UserProfileNew from './UserProfileNew/UserProfileNew';
 
 class App extends Component {
   componentDidMount() {
@@ -16,18 +17,17 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="container">
-        <BrowserRouter>
-          <div>
-            <Body />
-            <Header />
-            <Route exact path="/" component={Landing} />
-            <Route exact path="/userProfile" component={UserProfile} />
-            <Route exact path="/surveys/new" component={SurveyNew} />
-            <Footer />
-          </div>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <div className="container">
+          <Body />
+          <Header />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/userProfile" component={UserProfile} />
+          <Route exact path="/instrument/new" component={InstrumentNew} />
+          <Route exact path="/userprofile/new" component={UserProfileNew} />
+          <Footer />
+        </div>
+      </BrowserRouter>
     );
   }
 }
