@@ -1,1 +1,1 @@
-export { defalt } from './Body';
+export { default } from './Body';

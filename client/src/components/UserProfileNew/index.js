@@ -1,1 +1,1 @@
-export { defalt } from './UserProfileNew';
+export { default } from './UserProfileNew';

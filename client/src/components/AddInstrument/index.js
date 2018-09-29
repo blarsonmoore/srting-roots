@@ -1,1 +1,1 @@
-export { defalt } from './AddInstrument';
+export { default } from './AddInstrument';

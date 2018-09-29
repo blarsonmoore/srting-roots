@@ -23,7 +23,7 @@ class UserProfileForm extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.props.handleSubmit(values => console.log(values))}>
+        <form onSubmit={this.props.handleSubmit(this.props.onProfileSubmit)}>
           {this.renderFields()}
           <Link to="/userProfile" className="red btn-flat white-text">
             Cancel
@@ -41,9 +41,12 @@ class UserProfileForm extends Component {
 function validate(values) {
   const errors = {};
 
-  if (!values.userName) {
-    errors.userName = 'A User Name Is Required';
-  }
+  _.each(FIELDS, ({ name }) => {
+    if (!values[name]) {
+      errors[name] = 'Field is required.';
+    }
+  });
+
   return errors;
 }
 export default reduxForm({

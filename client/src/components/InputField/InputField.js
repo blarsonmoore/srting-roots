@@ -7,7 +7,7 @@ export default ({ input, label, meta: { error, touched } }) => {
   return (
     <div>
       <label>{label}</label>
-      <input {...input} />
+      <input id="input" {...input} />
       <div className="inputFieldError">{touched && error}</div>
     </div>
   );
