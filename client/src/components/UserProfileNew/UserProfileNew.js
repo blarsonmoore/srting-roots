@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
+import { reduxForm } from 'redux-form';
 import UserProfileForm from '../UserProfileForm/UserProfileForm';
-import FormReview from '../FormReview/FromReview';
 
 import './UserProfileNew.css';
 
 class UserProfileNew extends Component {
-  state = { showReview: false };
-
-  renderContent() {
-    if (this.state.showReview) {
-      return <FormReview />;
-    }
-    return <UserProfileForm onProfileSubmit={() => this.setState({ showFormReview: true })} />;
-  }
-
   render() {
-    return <div>{this.renderContent()}</div>;
+    return (
+      <div>
+        <UserProfileForm />
+      </div>
+    );
   }
 }
 
-export default UserProfileNew;
+export default reduxForm({
+  form: 'UserProfileForm'
+})(UserProfileNew);
