@@ -7,7 +7,7 @@ const userProfileSchema = new Schema({
   userBio: String,
   userImg: { data: Buffer, contentType: String },
   instruments: [instrumentSchema],
-  _user: { type: Schema.Types.ObjectId, ref: 'user' }
+  _user: { type: Schema.Types.ObjectId, ref: 'User' }
 });
 
 mongoose.model('userProfile', userProfileSchema);
