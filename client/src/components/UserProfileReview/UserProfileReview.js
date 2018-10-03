@@ -1,10 +1,11 @@
+import _ from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
 import formFields from '../formFields';
-import _ from 'lodash';
+import { Link, withRouter } from 'react-router-dom';
 import * as actions from '../../actions/';
 
-const UserProfileReview = ({ onCancel, formValues, SubmitProfile }) => {
+const UserProfileReview = ({ onCancel, formValues, SubmitProfile, history }) => {
   const reviewProfile = _.map(formFields, ({ name, label }) => {
     return (
       <div key={name}>
@@ -21,10 +22,12 @@ const UserProfileReview = ({ onCancel, formValues, SubmitProfile }) => {
         Edit
         <i className="material-icons right">edit</i>
       </button>
-      <button onClick={() => SubmitProfile(formValues)} className="green btn-flat right white-text">
-        Save
-        <i className="material-icons right">save</i>
-      </button>
+      <Link to="/userprofile">
+        <button onClick={() => SubmitProfile(formValues, history)} className="green btn-flat right white-text">
+          Save
+          <i className="material-icons right">save</i>
+        </button>
+      </Link>
     </div>
   );
 };
@@ -36,4 +39,4 @@ function mapStateToProps(state) {
 export default connect(
   mapStateToProps,
   actions
-)(UserProfileReview);
+)(withRouter(UserProfileReview));

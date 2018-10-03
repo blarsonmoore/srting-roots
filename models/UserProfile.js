@@ -5,7 +5,7 @@ const instrumentSchema = require('./instrumentProfile');
 const userProfileSchema = new Schema({
   userName: String,
   userBio: String,
-  userImg: { data: Buffer, contentType: String },
+  userImg: String,
   instruments: [instrumentSchema],
   _user: { type: Schema.Types.ObjectId, ref: 'User' }
 });

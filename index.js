@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const passport = require('passport');
 const cookieSession = require('cookie-session');
+const bodyParser = require('body-parser');
 
 require('./models/User');
 require('./models/UserProfile');
@@ -11,6 +12,8 @@ require('./services/passport');
 mongoose.connect(keys.mongoURI);
 
 const app = express();
+
+app.use(bodyParser.json());
 
 app.use(
   cookieSession({

@@ -2,9 +2,8 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
+import { Link } from 'react-router-dom';
 import InputField from '../InputField/InputField';
-import { Link, withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
 import formFields from '../formFields';
 
 import './UserProfileForm.css';

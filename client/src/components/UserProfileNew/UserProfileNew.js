@@ -20,5 +20,5 @@ class UserProfileNew extends Component {
 }
 
 export default reduxForm({
-  form: 'UserProfileForm'
+  form: 'userProfileForm'
 })(UserProfileNew);
