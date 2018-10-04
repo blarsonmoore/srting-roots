@@ -1,0 +1,16 @@
+img {
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  padding: 5px;
+  width: 350px;
+}
+
+#profile {
+  border: solid 2px gray;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 25px !important;
+  opacity: 0.9;
+  width: 80%;
+  margin: auto;
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import * as actions from '../../actions';
 import ProfileContent from '../ProfileContent/ProfileContent';
 
 import './UserProfile.css';

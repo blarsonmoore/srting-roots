@@ -16,7 +16,7 @@ export const SubmitProfile = (values, history) => async dispatch => {
 };
 
 export const fetchProfile = () => async dispatch => {
-  const res = await axios.get('/api/surveys');
+  const res = await axios.get('/api/userprofile');
 
   dispatch({ type: FETCH_PROFILE, payload: res.data });
 };

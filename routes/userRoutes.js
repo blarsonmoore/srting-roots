@@ -4,7 +4,7 @@ const UserProfile = mongoose.model('userProfile');
 
 module.exports = app => {
   app.get('/api/userprofile', requireLogin, async (req, res) => {
-    const profile = await Profile.find({ _user: req.user.id }).select({
+    const profile = await UserProfile.find({ _user: req.user.id }).select({
       userName: true,
       userImg: true,
       userBio: true
