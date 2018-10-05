@@ -6,11 +6,11 @@ const instrumentSchema = new Schema({
   builder: String,
   model: String,
   serialNumber: String,
-  year: Number,
+  year: String,
   Condition: String,
   purchasedFrom: String,
-  purchasePrice: Number,
-  image: { data: Buffer, contentType: String },
+  purchasePrice: String,
+  image: String,
   notes: String,
   _user: { type: Schema.Types.ObjectId, ref: 'User' }
 });

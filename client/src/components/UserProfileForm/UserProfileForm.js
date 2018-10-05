@@ -11,7 +11,15 @@ import './UserProfileForm.css';
 class UserProfileForm extends Component {
   renderFields() {
     return _.map(formFields, ({ label, name }) => {
-      return <Field key={name} component={InputField} type="text" label={label} name={name} />;
+      return (
+        <Field
+          key={name}
+          component={InputField}
+          type="text"
+          label={label}
+          name={name}
+        />
+      );
     });
   }
 
@@ -25,7 +33,10 @@ class UserProfileForm extends Component {
             Cancel
           </Link>
 
-          <button type="submit" className="btn waves-effect right blue-grey darken-3 waves">
+          <button
+            type="submit"
+            className="btn waves-effect right blue-grey darken-3 waves"
+          >
             Preview
             <i className="material-icons right">send</i>
           </button>

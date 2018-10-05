@@ -1,12 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
-import formFields from '../formFields';
+import InstrumentFormFields from '../InstrumentFormFields';
 import { Link, withRouter } from 'react-router-dom';
 import * as actions from '../../actions';
 
 const InstrumentReview = ({ onCancel, formValues, SubmitInstrument, history }) => {
-  const instrumentReview = _.map(formFields, ({ name, label }) => {
+  const instrumentReview = _.map(InstrumentFormFields, ({ name, label }) => {
     return (
       <div key={name}>
         <label>{label}</label>

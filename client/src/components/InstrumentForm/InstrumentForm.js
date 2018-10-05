@@ -4,20 +4,28 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import { Link } from 'react-router-dom';
 import InputField from '../InputField/InputField';
-import formFields from '../formFields';
+import InstrumentFormFields from '../InstrumentFormFields';
 
 import './instrumentForm.css';
 
 class InstrumentForm extends Component {
   renderFields() {
-    return _.map(formFields, ({ label, name }) => {
-      return <Field key={name} component={InputField} type="text" label={label} name={name} />;
+    return _.map(InstrumentFormFields, ({ label, name }) => {
+      return (
+        <Field
+          key={name}
+          component={InputField}
+          type="text"
+          label={label}
+          name={name}
+        />
+      );
     });
   }
 
   render() {
     return (
-      <div>
+      <div className="container">
         <form onSubmit={this.props.handleSubmit(this.props.onInstrumentSubmit)}>
           {this.renderFields()}
 
@@ -25,7 +33,10 @@ class InstrumentForm extends Component {
             Cancel
           </Link>
 
-          <button type="submit" className="btn waves-effect right blue-grey darken-3 waves">
+          <button
+            type="submit"
+            className="btn waves-effect right blue-grey darken-3 waves"
+          >
             Preview
             <i className="material-icons right">send</i>
           </button>
@@ -35,18 +46,18 @@ class InstrumentForm extends Component {
   }
 }
 
-function validate(values) {
-  const errors = {};
+// function validate(values) {
+//   const errors = {};
 
-  _.each(formFields, ({ name }) => {
-    if (!values[name]) {
-      errors[name] = 'Field is required.';
-    }
-  });
-  return errors;
-}
+//   _.each(InstrumentFormFields, ({ name }) => {
+//     if (!values[name]) {
+//       errors[name] = 'Field is required.';
+//     }
+//   });
+//   return errors;
+// }
 export default reduxForm({
-  validate,
+  // validate,
   form: 'instrumentForm',
   destroyOnUnmount: false
 })(InstrumentForm);
