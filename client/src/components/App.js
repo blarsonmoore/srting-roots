@@ -8,7 +8,7 @@ import Header from './Header/Header';
 import Landing from './Landing/Landing';
 import Footer from './Footer/Footer';
 import UserProfile from './UserProfile/UserProfile';
-import InstrumentNew from './AddInstrument/AddInstrument';
+import InstrumentNew from './InstrumentNew/InstrumentNew';
 import UserProfileNew from './UserProfileNew/UserProfileNew';
 
 class App extends Component {

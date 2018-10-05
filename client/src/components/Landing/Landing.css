@@ -1,0 +1,18 @@
+#hp-container-1 {
+  width: 100%;
+  max-width: initial;
+}
+
+#hp-image-1 {
+  max-width: 100%;
+  height: auto;
+}
+
+#hp-svg-1 {
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 600px;
+  height: auto;
+  max-width: 33%;
+}

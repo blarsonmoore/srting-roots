@@ -20,3 +20,15 @@ export const fetchProfile = () => async dispatch => {
 
   dispatch({ type: FETCH_PROFILE, payload: res.data });
 };
+
+export const SubmitInstrument = (values, history) => async dispatch => {
+  const res = await axios.post('/api/instrumentprofile', values);
+  history.push('/userprofile');
+  dispatch({ type: FETCH_USER, payload: res.data });
+};
+
+export const fetchInstruments = () => async dispatch => {
+  const res = await axios.get('/api/instrumentprofile');
+
+  dispatch({ type: FETCH_PROFILE, payload: res.data });
+};

@@ -1,13 +1,11 @@
-body {
+/* body {
   background-image: url('./Images/homepage_bg.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-}
+} */
 
-
-#mainContainer{
+#mainContainer {
   width: 100%;
-  max-width:initial;
-  
+  max-width: initial;
 }

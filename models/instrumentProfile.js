@@ -15,4 +15,4 @@ const instrumentSchema = new Schema({
   _user: { type: Schema.Types.ObjectId, ref: 'User' }
 });
 
-module.exports = instrumentSchema;
+mongoose.model('instrumentProfile', instrumentSchema);
