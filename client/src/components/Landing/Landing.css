@@ -23,10 +23,15 @@
 
 .hp-container-3 {
   height: auto;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
 }
 
 .h4-font {
   font-size: 80px;
+  font-family: 'Fahkwang';
+}
+
+#hp-list {
+  font-size: 60px;
   font-family: 'Fahkwang';
 }

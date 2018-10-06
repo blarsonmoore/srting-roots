@@ -13,9 +13,7 @@ const Landing = () => {
 
       <div className="row hp-container-2">
         <div className="col s12 m6">
-          <h4 className="h4-font">
-            Browse World Class Collections From Around The World
-          </h4>
+          <h4 className="h4-font">Browse World Class Collections From Around The World</h4>
         </div>
         <div className="col s12 m6">
           <img id="hp-image-1" alt="blue guitar" src={LandingImg_2} />
@@ -26,7 +24,7 @@ const Landing = () => {
         <div className="col s12 m6">
           <img id="hp-image-1" alt="blue guitar" src={LandingImg_3} />
         </div>
-        <div className="col s12 m6">
+        <div id="hp-list" className="col s12 m6">
           <ul>
             <li>Browse </li>
             <li>Share</li>
