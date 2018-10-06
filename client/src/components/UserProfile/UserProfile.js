@@ -13,7 +13,7 @@ const UserProfile = () => {
       <InstrumentContent />
 
       <h5> Add New Instrument</h5>
-      <Link to="/instrument/new" className="btn-floating btn-large red">
+      <Link to="/instrument/new" className="btn-floating right btn-large red">
         <i className="material-icons">add</i>
       </Link>
     </div>
