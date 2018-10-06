@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './Header.css';
+import 'materialize-css/dist/css/materialize.min.css';
+import 'materialize-css/dist/js/materialize';
 
 class Header extends Component {
   renderContent() {
@@ -16,25 +18,32 @@ class Header extends Component {
         );
       default:
         return (
-          <li>
-            <a href="/api/logout">Logout</a>
-          </li>
+          <ul>
+            <li>
+              <a href="/api/logout">Logout</a>
+            </li>
+            <li>
+              <a href="/userprofile">My Profile</a>
+            </li>
+          </ul>
         );
     }
   }
   render() {
     return (
-      <nav id="navbar" className="black">
-        <div className="nav-wrapper">
-          <Link
-            to={this.props.auth ? '/userprofile' : '/'}
-            className="brand-logo"
-          >
+      <nav>
+        <div className="nav-wrapper black">
+          <Link to={this.props.auth ? '/userprofile' : '/'} className="brand-logo">
             SR
           </Link>
-          <ul id="nav-mobile" className="right hide-on-med-and-down ">
+          <a href="sidenav" data-target="mobile-demo" class="sidenav-trigger">
+            <i className="material-icons">menu</i>
+          </a>
+          <ul className="right hide-on-med-and-down">{this.renderContent()}</ul>
+          {/* <ul class="sidenav" id="mobile-demo">
             {this.renderContent()}
-          </ul>
+            
+          </ul> */}
         </div>
       </nav>
     );

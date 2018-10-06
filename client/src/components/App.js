@@ -11,16 +11,41 @@ import UserProfile from './UserProfile/UserProfile';
 import InstrumentNew from './InstrumentNew/InstrumentNew';
 import UserProfileNew from './UserProfileNew/UserProfileNew';
 
+import Toolbar from '../components/Toolbar/Toolbar';
+import SideDrawer from '../components/SideDrawer/SideDrawer';
+import Backdrop from '../components/Backdrop/Backdrop';
+
 class App extends Component {
   componentDidMount() {
     this.props.fetchUser();
   }
+
+  state = {
+    sideDrawerOpen: false
+  };
+
+  drawerToggleClickHandler = () => {
+    this.setState(prevState => {
+      return { sideDrawerOpen: !prevState.sideDrawerOpen };
+    });
+  };
+
+  backdropClickHandler = () => {
+    this.setState({ sideDrawerOpen: false });
+  };
+
   render() {
+    let backdrop;
+
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />;
+    }
     return (
       <BrowserRouter>
         <div id="mainContainer" className="container">
-          <Header />
-          <Body />
+          <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
+          <SideDrawer show={this.state.sideDrawerOpen} />
+          {backdrop}
           <Route exact path="/" component={Landing} />
           <Route exact path="/userprofile" component={UserProfile} />
           <Route exact path="/instrument/new" component={InstrumentNew} />
