@@ -7,22 +7,16 @@ import './UserProfile.css';
 
 const UserProfile = () => {
   return (
-    <div className="container">
-    <div className="row">
-      <div>
-        <ProfileContent />
-      </div>
-      </div>
-      <div className="row">
-        <InstrumentContent />
-        <div className="fixed-action-btn">
-          <h5> Add New Instrument</h5>
-          <Link to="/instrument/new" className="btn-floating btn-large red">
-            <i className="material-icons">add</i>
-          </Link>
-        </div>
-      </div>
-      </div>
+    <div>
+      <ProfileContent />
+
+      <InstrumentContent />
+
+      <h5> Add New Instrument</h5>
+      <Link to="/instrument/new" className="btn-floating btn-large red">
+        <i className="material-icons">add</i>
+      </Link>
+    </div>
   );
 };
 

@@ -1,4 +1,9 @@
-#hp-container-1 {
+@fontface {
+  font-family: 'Bungee Inline', cursive;
+  src: url('https://fonts.google.com/specimen/Fahkwang');
+}
+
+.hp-container-1 {
   width: 100%;
   max-width: initial;
   position: relative;
@@ -8,4 +13,20 @@
 #hp-image-1 {
   max-width: 100%;
   height: auto;
+}
+
+.hp-container-2 {
+  margin-top: 40px;
+  padding: 25px;
+  height: auto;
+}
+
+.hp-container-3 {
+  height: auto;
+  margin-bottom: 70px;
+}
+
+.h4-font {
+  font-size: 80px;
+  font-family: 'Fahkwang';
 }

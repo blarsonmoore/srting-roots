@@ -50,7 +50,7 @@ class App extends Component {
           <Route exact path="/userprofile" component={UserProfile} />
           <Route exact path="/instrument/new" component={InstrumentNew} />
           <Route exact path="/userprofile/new" component={UserProfileNew} />
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </BrowserRouter>
     );
