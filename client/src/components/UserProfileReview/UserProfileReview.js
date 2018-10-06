@@ -15,7 +15,7 @@ const UserProfileReview = ({ onCancel, formValues, SubmitProfile, history }) => 
     );
   });
   return (
-    <div>
+    <div id="userForm">
       <h5>Please Review Your Profile</h5>
       {reviewProfile}
       <button className="red btn-flat white-text" onClick={onCancel}>
